@@ -2,7 +2,7 @@
 
 This repository implements bit interleaving in C/C++.
 
-     morton(0b1100,0b0011)
+     morton(0bGHIJ,0bKLMN)
               │││└──┐││││
               ││└─┐ │││││
               │└┐ │ │││││
@@ -12,7 +12,7 @@ This repository implements bit interleaving in C/C++.
               │││││ │  ││
               │││││┌───┘│
               │││││││┌──┘
-            0b10100101
+            0bGKHLIMJN
 
 By default a SWAR implementation is used which takes 2 nanoseconds. If
 `-mbmi2` is available, then `morton()` and `unmorton()` take less than
