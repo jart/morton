@@ -39,7 +39,8 @@
  */
 unsigned long long morton(unsigned hi, unsigned lo) {
 #ifdef __BMI2__
-    return _pdep_u64(lo, 0x5555555555555555) | _pdep_u64(hi, 0xAAAAAAAAAAAAAAAA);
+    return _pdep_u64(lo, 0x5555555555555555) |
+           _pdep_u64(hi, 0xAAAAAAAAAAAAAAAA);
 #else
     unsigned long long xu = lo;
     unsigned long long yu = hi;
