@@ -25,7 +25,8 @@
 /**
  * Interleaves bits.
  *
- *     morton(0bGHIJ,0bKLMN)
+ *     morton(0b1100,0b0011)
+ *              ABCD   1234
  *              │││└──┐││││
  *              ││└─┐ │││││
  *              │└┐ │ │││││
@@ -35,7 +36,8 @@
  *              │││││ │  ││
  *              │││││┌───┘│
  *              │││││││┌──┘
- *            0bGKHLIMJN
+ *              A1B2C3D4
+ *            0b10100101
  */
 unsigned long long morton(unsigned hi, unsigned lo) {
 #ifdef __BMI2__
